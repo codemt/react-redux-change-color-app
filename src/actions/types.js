@@ -1,0 +1,1 @@
+export const CHANGE_COLOR = 'change_color'
