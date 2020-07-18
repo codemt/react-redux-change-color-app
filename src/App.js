@@ -33,6 +33,8 @@ class App extends Component{
   render(){
     console.log(this.props)
 
+    const welcome = this.props.data.welcomeMessege
+
     const DivStyles = {
 
       position:'fixed',
@@ -41,15 +43,15 @@ class App extends Component{
       left:`30%`,
       marginTop:`-100px`,
       marginLeft:`-100px`,
-      backgroundColor:this.props.data,
+      backgroundColor:this.props.data.color,
       border:'1px solid red',
       height:`50%`
   
   }
     return (
       <div className="App">
+         <h4 style={{ textAlign:'center',fontSize: '25px',}}>{welcome}</h4> 
           <div style={DivStyles}>
-          
           </div>
           <div style={formStyles}>
           <input onChange={this.onHandleInputChange} id ="color" type="text" />
@@ -76,7 +78,7 @@ const formStyles = {
 }
 const MapStateToProps = (state) =>({
 
-  data : state.data.color
+  data : state.data
 
 })
 const MapDispatchToProps = {

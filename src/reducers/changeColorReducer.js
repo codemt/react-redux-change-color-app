@@ -1,6 +1,7 @@
 import { CHANGE_COLOR } from '../actions/types'
 let data = {
-    color:'blue'
+    color:'blue',
+    "welcomeMessege":"Welcome to Redux React App"
 }
 function changeColorReducer(state=data,{type,payload}){
 
